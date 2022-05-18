@@ -1,4 +1,5 @@
 node('workers'){
+  stages {
     stage('Checkout'){
       steps {
         git branch: 'develop',
@@ -6,4 +7,5 @@ node('workers'){
             url: 'git@github.com:tomislav993/Loader.git'
        }
     }
+  }
 }
