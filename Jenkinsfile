@@ -5,4 +5,3 @@ node('workers'){
             url: 'git@github.com:tomislav993/Loader.git'
     }
   }
-}
