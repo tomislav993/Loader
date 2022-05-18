@@ -1,5 +1,9 @@
 node('workers'){
     stage('Checkout'){
-        checkout scm
+        steps {
+        git branch: 'develop',
+            credentialsId: 'jenko',
+            url: 'git@github.com:tomislav993/Loader.git'
+       }
     }
 }
