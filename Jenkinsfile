@@ -1,7 +1,9 @@
 node('workers'){
     stage('Checkout'){
-        git branch: 'develop',
-            credentialsId: 'jenko',
-            url: 'git@github.com:tomislav993/Loader.git'
+        checkout scm
+    }
+    stage('Unit Tests'){
+        sh "docker build -t ${imageName}-test -f Dockerfile.test ."
+        sh "docker run --rm ${imageName}-test"
     }
   }
