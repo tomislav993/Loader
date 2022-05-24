@@ -1,4 +1,4 @@
-def imageName = 'mlabouardy/movies-loader'
+def imageName = 'tpavic/movies-loader'
 
 node('workers'){
     stage('Checkout'){
